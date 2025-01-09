@@ -58,7 +58,6 @@ namespace AppEscala
             button8 = new Button();
             timerSideBarTransition = new System.Windows.Forms.Timer(components);
             btnHam = new PictureBox();
-            label1 = new Label();
             nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             panel1 = new Panel();
             userControl11 = new UserControl1();
@@ -90,6 +89,7 @@ namespace AppEscala
             // sidebar
             // 
             sidebar.BackColor = Color.DimGray;
+            sidebar.BorderStyle = BorderStyle.FixedSingle;
             sidebar.Controls.Add(pnMenu);
             sidebar.Controls.Add(MenuContainer);
             sidebar.Controls.Add(EscalaContainer);
@@ -188,7 +188,7 @@ namespace AppEscala
             subMenu1.Padding = new Padding(8, 5, 5, 5);
             subMenu1.Size = new Size(202, 71);
             subMenu1.TabIndex = 1;
-            subMenu1.Text = "     Acólitos";
+            subMenu1.Text = "     Pesquisar";
             subMenu1.TextAlign = ContentAlignment.MiddleLeft;
             subMenu1.UseVisualStyleBackColor = false;
             subMenu1.Click += subMenu1_Click;
@@ -418,31 +418,21 @@ namespace AppEscala
             btnHam.TabStop = false;
             btnHam.Click += btnHam_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Tahoma", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(97, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(144, 23);
-            label1.TabIndex = 4;
-            label1.Text = "CRIAR ESCALAS";
-            // 
             // nightControlBox1
             // 
             nightControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             nightControlBox1.BackColor = Color.Transparent;
             nightControlBox1.CloseHoverColor = Color.FromArgb(199, 80, 80);
-            nightControlBox1.CloseHoverForeColor = Color.White;
+            nightControlBox1.CloseHoverForeColor = Color.DarkGray;
             nightControlBox1.DefaultLocation = true;
             nightControlBox1.DisableMaximizeColor = Color.FromArgb(105, 105, 105);
             nightControlBox1.DisableMinimizeColor = Color.FromArgb(105, 105, 105);
-            nightControlBox1.EnableCloseColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.EnableCloseColor = Color.WhiteSmoke;
             nightControlBox1.EnableMaximizeButton = true;
-            nightControlBox1.EnableMaximizeColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.EnableMaximizeColor = Color.WhiteSmoke;
             nightControlBox1.EnableMinimizeButton = true;
-            nightControlBox1.EnableMinimizeColor = Color.FromArgb(160, 160, 160);
-            nightControlBox1.Location = new Point(637, 0);
+            nightControlBox1.EnableMinimizeColor = Color.WhiteSmoke;
+            nightControlBox1.Location = new Point(634, 5);
             nightControlBox1.MaximizeHoverColor = Color.FromArgb(15, 255, 255, 255);
             nightControlBox1.MaximizeHoverForeColor = Color.White;
             nightControlBox1.MinimizeHoverColor = Color.FromArgb(15, 255, 255, 255);
@@ -453,9 +443,8 @@ namespace AppEscala
             // 
             // panel1
             // 
-            panel1.BackColor = Color.White;
+            panel1.BackColor = Color.DimGray;
             panel1.Controls.Add(nightControlBox1);
-            panel1.Controls.Add(label1);
             panel1.Controls.Add(btnHam);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -480,6 +469,7 @@ namespace AppEscala
             // 
             // userAcolitos
             // 
+            userAcolitos.BackColor = Color.Silver;
             userAcolitos.Location = new Point(33, 37);
             userAcolitos.Name = "userAcolitos";
             userAcolitos.Size = new Size(746, 472);
@@ -521,9 +511,9 @@ namespace AppEscala
             pnLogout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btnHam).EndInit();
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
         }
+
 
         #endregion
         private System.Windows.Forms.Timer menuTransition;
@@ -541,7 +531,6 @@ namespace AppEscala
         private Button button9;
         private System.Windows.Forms.Timer timerSideBarTransition;
         private PictureBox btnHam;
-        private Label label1;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
         private Panel panel1;
         private Button button2;

@@ -38,21 +38,23 @@
             button1 = new Button();
             label3 = new Label();
             button2 = new Button();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(269, 11);
+            label1.Font = new Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(280, 33);
             label1.Name = "label1";
-            label1.Size = new Size(154, 21);
+            label1.Size = new Size(207, 25);
             label1.TabIndex = 0;
             label1.Text = "Adicionar Acólitos:";
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(208, 53);
+            txtNome.Location = new Point(202, 139);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(345, 23);
             txtNome.TabIndex = 1;
@@ -60,7 +62,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(148, 56);
+            label2.Location = new Point(142, 142);
             label2.Name = "label2";
             label2.Size = new Size(43, 15);
             label2.TabIndex = 2;
@@ -70,7 +72,7 @@
             // 
             dateTimePicker1.CustomFormat = "dd/MM/yyyy";
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(353, 104);
+            dateTimePicker1.Location = new Point(347, 190);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(200, 23);
             dateTimePicker1.TabIndex = 5;
@@ -79,7 +81,7 @@
             // check_semana
             // 
             check_semana.AutoSize = true;
-            check_semana.Location = new Point(148, 98);
+            check_semana.Location = new Point(142, 184);
             check_semana.Name = "check_semana";
             check_semana.Size = new Size(184, 19);
             check_semana.TabIndex = 8;
@@ -90,7 +92,7 @@
             // check_fimDsmn
             // 
             check_fimDsmn.AutoSize = true;
-            check_fimDsmn.Location = new Point(148, 123);
+            check_fimDsmn.Location = new Point(142, 209);
             check_fimDsmn.Name = "check_fimDsmn";
             check_fimDsmn.Size = new Size(190, 19);
             check_fimDsmn.TabIndex = 9;
@@ -100,7 +102,7 @@
             // 
             // listView1
             // 
-            listView1.Location = new Point(353, 133);
+            listView1.Location = new Point(347, 219);
             listView1.Name = "listView1";
             listView1.Size = new Size(200, 97);
             listView1.TabIndex = 10;
@@ -109,7 +111,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(478, 236);
+            button1.Location = new Point(472, 322);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 11;
@@ -121,7 +123,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(354, 84);
+            label3.Location = new Point(348, 170);
             label3.Name = "label3";
             label3.Size = new Size(199, 17);
             label3.TabIndex = 12;
@@ -129,13 +131,23 @@
             // 
             // button2
             // 
-            button2.Location = new Point(286, 266);
+            button2.Location = new Point(280, 352);
             button2.Name = "button2";
             button2.Size = new Size(137, 41);
             button2.TabIndex = 13;
             button2.Text = "Adicionar Acólito";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ButtonShadow;
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(746, 97);
+            panel1.TabIndex = 14;
             // 
             // UserControl2
             // 
@@ -150,9 +162,11 @@
             Controls.Add(dateTimePicker1);
             Controls.Add(label2);
             Controls.Add(txtNome);
-            Controls.Add(label1);
+            Controls.Add(panel1);
             Name = "UserControl2";
             Size = new Size(746, 472);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -169,5 +183,6 @@
         private Button button1;
         private Label label3;
         private Button button2;
+        private Panel panel1;
     }
 }
