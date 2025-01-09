@@ -33,6 +33,8 @@ namespace AppEscala
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_menu));
             menuTransition = new System.Windows.Forms.Timer(components);
             sidebar = new FlowLayoutPanel();
+            pnMenu = new Panel();
+            button1 = new Button();
             MenuContainer = new FlowLayoutPanel();
             panel3 = new Panel();
             menu = new Button();
@@ -40,8 +42,13 @@ namespace AppEscala
             subMenu1 = new Button();
             panel4 = new Panel();
             subMenu2 = new Button();
+            EscalaContainer = new FlowLayoutPanel();
             pnEscala = new Panel();
-            button7 = new Button();
+            btnEscala = new Button();
+            panel7 = new Panel();
+            button5 = new Button();
+            panel8 = new Panel();
+            button6 = new Button();
             pnInfo = new Panel();
             button3 = new Button();
             pnConfig = new Panel();
@@ -57,13 +64,17 @@ namespace AppEscala
             userControl11 = new UserControl1();
             userControl21 = new UserControl2();
             userAcolitos = new userAcolitos();
-            missas1 = new Missas();
+            EscalaTransition = new System.Windows.Forms.Timer(components);
             sidebar.SuspendLayout();
+            pnMenu.SuspendLayout();
             MenuContainer.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
+            EscalaContainer.SuspendLayout();
             pnEscala.SuspendLayout();
+            panel7.SuspendLayout();
+            panel8.SuspendLayout();
             pnInfo.SuspendLayout();
             pnConfig.SuspendLayout();
             pnLogout.SuspendLayout();
@@ -78,9 +89,10 @@ namespace AppEscala
             // 
             // sidebar
             // 
-            sidebar.BackColor = Color.Black;
+            sidebar.BackColor = Color.DimGray;
+            sidebar.Controls.Add(pnMenu);
             sidebar.Controls.Add(MenuContainer);
-            sidebar.Controls.Add(pnEscala);
+            sidebar.Controls.Add(EscalaContainer);
             sidebar.Controls.Add(pnInfo);
             sidebar.Controls.Add(pnConfig);
             sidebar.Controls.Add(pnLogout);
@@ -89,21 +101,45 @@ namespace AppEscala
             sidebar.Location = new Point(0, 37);
             sidebar.Name = "sidebar";
             sidebar.Padding = new Padding(0, 30, 0, 0);
-            sidebar.Size = new Size(186, 472);
+            sidebar.Size = new Size(40, 472);
             sidebar.TabIndex = 3;
-            sidebar.Paint += sidebar_Paint;
+            // 
+            // pnMenu
+            // 
+            pnMenu.Controls.Add(button1);
+            pnMenu.Location = new Point(3, 33);
+            pnMenu.Name = "pnMenu";
+            pnMenu.Size = new Size(183, 55);
+            pnMenu.TabIndex = 10;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.DimGray;
+            button1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = SystemColors.Control;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(-10, -13);
+            button1.Name = "button1";
+            button1.Padding = new Padding(13, 15, 0, 0);
+            button1.Size = new Size(202, 73);
+            button1.TabIndex = 1;
+            button1.Text = "       Menu";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // MenuContainer
             // 
-            MenuContainer.BackColor = SystemColors.ActiveCaptionText;
+            MenuContainer.BackColor = Color.DimGray;
             MenuContainer.Controls.Add(panel3);
             MenuContainer.Controls.Add(panel2);
             MenuContainer.Controls.Add(panel4);
-            MenuContainer.Location = new Point(0, 30);
+            MenuContainer.Location = new Point(0, 91);
             MenuContainer.Margin = new Padding(0);
             MenuContainer.Name = "MenuContainer";
             MenuContainer.Padding = new Padding(2, 0, 0, 0);
-            MenuContainer.Size = new Size(186, 173);
+            MenuContainer.Size = new Size(186, 58);
             MenuContainer.TabIndex = 11;
             // 
             // panel3
@@ -111,22 +147,22 @@ namespace AppEscala
             panel3.Controls.Add(menu);
             panel3.Location = new Point(5, 3);
             panel3.Name = "panel3";
-            panel3.Size = new Size(189, 40);
+            panel3.Size = new Size(189, 46);
             panel3.TabIndex = 9;
             // 
             // menu
             // 
-            menu.BackColor = Color.Black;
+            menu.BackColor = Color.DimGray;
             menu.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             menu.ForeColor = SystemColors.Control;
             menu.Image = (Image)resources.GetObject("menu.Image");
             menu.ImageAlign = ContentAlignment.MiddleLeft;
-            menu.Location = new Point(-10, -13);
+            menu.Location = new Point(-10, -14);
             menu.Name = "menu";
-            menu.Padding = new Padding(13, 5, 0, 0);
+            menu.Padding = new Padding(13, 13, 0, 0);
             menu.Size = new Size(202, 73);
             menu.TabIndex = 1;
-            menu.Text = "      Acólitos";
+            menu.Text = "      Ver Acólitos";
             menu.TextAlign = ContentAlignment.MiddleLeft;
             menu.UseVisualStyleBackColor = false;
             menu.Click += btnMenu_Click;
@@ -134,14 +170,14 @@ namespace AppEscala
             // panel2
             // 
             panel2.Controls.Add(subMenu1);
-            panel2.Location = new Point(5, 49);
+            panel2.Location = new Point(5, 55);
             panel2.Name = "panel2";
             panel2.Size = new Size(186, 40);
             panel2.TabIndex = 8;
             // 
             // subMenu1
             // 
-            subMenu1.BackColor = Color.Black;
+            subMenu1.BackColor = Color.DimGray;
             subMenu1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             subMenu1.ForeColor = SystemColors.Control;
             subMenu1.Image = (Image)resources.GetObject("subMenu1.Image");
@@ -152,7 +188,7 @@ namespace AppEscala
             subMenu1.Padding = new Padding(8, 5, 5, 5);
             subMenu1.Size = new Size(202, 71);
             subMenu1.TabIndex = 1;
-            subMenu1.Text = "    Acólitos";
+            subMenu1.Text = "     Acólitos";
             subMenu1.TextAlign = ContentAlignment.MiddleLeft;
             subMenu1.UseVisualStyleBackColor = false;
             subMenu1.Click += subMenu1_Click;
@@ -160,14 +196,14 @@ namespace AppEscala
             // panel4
             // 
             panel4.Controls.Add(subMenu2);
-            panel4.Location = new Point(5, 95);
+            panel4.Location = new Point(5, 101);
             panel4.Name = "panel4";
             panel4.Size = new Size(186, 40);
             panel4.TabIndex = 9;
             // 
             // subMenu2
             // 
-            subMenu2.BackColor = Color.Black;
+            subMenu2.BackColor = Color.DimGray;
             subMenu2.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             subMenu2.ForeColor = SystemColors.Control;
             subMenu2.Image = (Image)resources.GetObject("subMenu2.Image");
@@ -178,48 +214,110 @@ namespace AppEscala
             subMenu2.Padding = new Padding(8, 5, 5, 5);
             subMenu2.Size = new Size(202, 73);
             subMenu2.TabIndex = 1;
-            subMenu2.Text = "    Adicionar Acólitos";
+            subMenu2.Text = "     Adicionar Acólitos";
             subMenu2.TextAlign = ContentAlignment.MiddleLeft;
             subMenu2.UseVisualStyleBackColor = false;
             subMenu2.Click += subMenu2_Click;
             // 
+            // EscalaContainer
+            // 
+            EscalaContainer.BackColor = Color.DimGray;
+            EscalaContainer.Controls.Add(pnEscala);
+            EscalaContainer.Controls.Add(panel7);
+            EscalaContainer.Controls.Add(panel8);
+            EscalaContainer.Location = new Point(0, 149);
+            EscalaContainer.Margin = new Padding(0);
+            EscalaContainer.Name = "EscalaContainer";
+            EscalaContainer.Padding = new Padding(2, 0, 0, 0);
+            EscalaContainer.Size = new Size(186, 57);
+            EscalaContainer.TabIndex = 13;
+            // 
             // pnEscala
             // 
-            pnEscala.Controls.Add(button7);
-            pnEscala.Location = new Point(3, 206);
+            pnEscala.Controls.Add(btnEscala);
+            pnEscala.Location = new Point(5, 3);
             pnEscala.Name = "pnEscala";
-            pnEscala.Size = new Size(183, 55);
+            pnEscala.Size = new Size(189, 40);
             pnEscala.TabIndex = 9;
             // 
-            // button7
+            // btnEscala
             // 
-            button7.BackColor = Color.Black;
-            button7.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button7.ForeColor = SystemColors.Control;
-            button7.Image = (Image)resources.GetObject("button7.Image");
-            button7.ImageAlign = ContentAlignment.MiddleLeft;
-            button7.Location = new Point(-12, -11);
-            button7.Margin = new Padding(0);
-            button7.Name = "button7";
-            button7.Padding = new Padding(18, 5, 5, 5);
-            button7.Size = new Size(201, 70);
-            button7.TabIndex = 1;
-            button7.Text = "     Escalas";
-            button7.TextAlign = ContentAlignment.MiddleLeft;
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
+            btnEscala.BackColor = Color.DimGray;
+            btnEscala.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEscala.ForeColor = SystemColors.Control;
+            btnEscala.Image = (Image)resources.GetObject("btnEscala.Image");
+            btnEscala.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEscala.Location = new Point(-10, -13);
+            btnEscala.Name = "btnEscala";
+            btnEscala.Padding = new Padding(13, 5, 0, 0);
+            btnEscala.Size = new Size(202, 73);
+            btnEscala.TabIndex = 1;
+            btnEscala.Text = "      Escalas";
+            btnEscala.TextAlign = ContentAlignment.MiddleLeft;
+            btnEscala.UseVisualStyleBackColor = false;
+            btnEscala.Click += btnEscala_Click;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(button5);
+            panel7.Location = new Point(5, 49);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(186, 40);
+            panel7.TabIndex = 8;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.DimGray;
+            button5.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.ForeColor = SystemColors.Control;
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.ImageAlign = ContentAlignment.MiddleLeft;
+            button5.Location = new Point(-4, -12);
+            button5.Margin = new Padding(0);
+            button5.Name = "button5";
+            button5.Padding = new Padding(8, 5, 5, 5);
+            button5.Size = new Size(202, 71);
+            button5.TabIndex = 1;
+            button5.Text = "     AlgumaCoisa";
+            button5.TextAlign = ContentAlignment.MiddleLeft;
+            button5.UseVisualStyleBackColor = false;
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(button6);
+            panel8.Location = new Point(5, 95);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(186, 40);
+            panel8.TabIndex = 9;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.DimGray;
+            button6.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button6.ForeColor = SystemColors.Control;
+            button6.Image = (Image)resources.GetObject("button6.Image");
+            button6.ImageAlign = ContentAlignment.MiddleLeft;
+            button6.Location = new Point(-4, -12);
+            button6.Margin = new Padding(0);
+            button6.Name = "button6";
+            button6.Padding = new Padding(8, 5, 5, 5);
+            button6.Size = new Size(202, 73);
+            button6.TabIndex = 1;
+            button6.Text = "     AlgumaCoisa";
+            button6.TextAlign = ContentAlignment.MiddleLeft;
+            button6.UseVisualStyleBackColor = false;
             // 
             // pnInfo
             // 
             pnInfo.Controls.Add(button3);
-            pnInfo.Location = new Point(3, 267);
+            pnInfo.Location = new Point(3, 209);
             pnInfo.Name = "pnInfo";
             pnInfo.Size = new Size(183, 55);
             pnInfo.TabIndex = 10;
             // 
             // button3
             // 
-            button3.BackColor = Color.Black;
+            button3.BackColor = Color.DimGray;
             button3.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.ForeColor = SystemColors.Control;
             button3.Image = (Image)resources.GetObject("button3.Image");
@@ -230,7 +328,7 @@ namespace AppEscala
             button3.Padding = new Padding(18, 5, 5, 5);
             button3.Size = new Size(201, 70);
             button3.TabIndex = 1;
-            button3.Text = "     Informações";
+            button3.Text = "      Informações";
             button3.TextAlign = ContentAlignment.MiddleLeft;
             button3.UseVisualStyleBackColor = false;
             // 
@@ -238,14 +336,14 @@ namespace AppEscala
             // 
             pnConfig.Controls.Add(button2);
             pnConfig.Controls.Add(button9);
-            pnConfig.Location = new Point(3, 328);
+            pnConfig.Location = new Point(3, 270);
             pnConfig.Name = "pnConfig";
             pnConfig.Size = new Size(183, 55);
             pnConfig.TabIndex = 12;
             // 
             // button2
             // 
-            button2.BackColor = Color.Black;
+            button2.BackColor = Color.DimGray;
             button2.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = SystemColors.Control;
             button2.Image = (Image)resources.GetObject("button2.Image");
@@ -280,14 +378,14 @@ namespace AppEscala
             // pnLogout
             // 
             pnLogout.Controls.Add(button8);
-            pnLogout.Location = new Point(3, 389);
+            pnLogout.Location = new Point(3, 331);
             pnLogout.Name = "pnLogout";
             pnLogout.Size = new Size(183, 55);
             pnLogout.TabIndex = 8;
             // 
             // button8
             // 
-            button8.BackColor = Color.Black;
+            button8.BackColor = Color.DimGray;
             button8.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button8.ForeColor = SystemColors.Control;
             button8.Image = (Image)resources.GetObject("button8.Image");
@@ -295,10 +393,10 @@ namespace AppEscala
             button8.Location = new Point(-10, -12);
             button8.Margin = new Padding(0);
             button8.Name = "button8";
-            button8.Padding = new Padding(18, 5, 5, 5);
+            button8.Padding = new Padding(15, 5, 5, 5);
             button8.Size = new Size(202, 71);
             button8.TabIndex = 1;
-            button8.Text = "     Sair";
+            button8.Text = "      Sair";
             button8.TextAlign = ContentAlignment.MiddleLeft;
             button8.UseVisualStyleBackColor = false;
             button8.Click += button8_Click;
@@ -310,10 +408,11 @@ namespace AppEscala
             // 
             // btnHam
             // 
+            btnHam.BackgroundImageLayout = ImageLayout.Zoom;
             btnHam.Image = (Image)resources.GetObject("btnHam.Image");
-            btnHam.Location = new Point(9, 4);
+            btnHam.Location = new Point(0, 3);
             btnHam.Name = "btnHam";
-            btnHam.Size = new Size(39, 29);
+            btnHam.Size = new Size(40, 33);
             btnHam.SizeMode = PictureBoxSizeMode.StretchImage;
             btnHam.TabIndex = 3;
             btnHam.TabStop = false;
@@ -322,12 +421,12 @@ namespace AppEscala
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F);
-            label1.Location = new Point(54, 9);
+            label1.Font = new Font("Tahoma", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(97, 9);
             label1.Name = "label1";
-            label1.Size = new Size(198, 19);
+            label1.Size = new Size(144, 23);
             label1.TabIndex = 4;
-            label1.Text = "CRIAR ESCALAS | TELA INICIAL";
+            label1.Text = "CRIAR ESCALAS";
             // 
             // nightControlBox1
             // 
@@ -367,33 +466,29 @@ namespace AppEscala
             // 
             // userControl11
             // 
-            userControl11.Location = new Point(30, 37);
+            userControl11.Location = new Point(33, 37);
             userControl11.Name = "userControl11";
             userControl11.Size = new Size(746, 472);
             userControl11.TabIndex = 5;
             // 
             // userControl21
             // 
-            userControl21.Location = new Point(30, 37);
+            userControl21.Location = new Point(33, 37);
             userControl21.Name = "userControl21";
             userControl21.Size = new Size(743, 472);
             userControl21.TabIndex = 6;
-            userControl21.Load += userControl21_Load;
             // 
             // userAcolitos
             // 
-            userAcolitos.Location = new Point(30, 37);
+            userAcolitos.Location = new Point(33, 37);
             userAcolitos.Name = "userAcolitos";
             userAcolitos.Size = new Size(746, 472);
             userAcolitos.TabIndex = 8;
             // 
-            // missas1
+            // EscalaTransition
             // 
-            missas1.Location = new Point(30, 37);
-            missas1.Name = "missas1";
-            missas1.RightToLeft = RightToLeft.No;
-            missas1.Size = new Size(746, 472);
-            missas1.TabIndex = 10;
+            EscalaTransition.Interval = 7;
+            EscalaTransition.Tick += EscalaTransition_Tick;
             // 
             // form_menu
             // 
@@ -401,10 +496,9 @@ namespace AppEscala
             ClientSize = new Size(776, 505);
             Controls.Add(sidebar);
             Controls.Add(panel1);
-            Controls.Add(missas1);
             Controls.Add(userAcolitos);
-            Controls.Add(userControl11);
             Controls.Add(userControl21);
+            Controls.Add(userControl11);
             FormBorderStyle = FormBorderStyle.None;
             IsMdiContainer = true;
             Name = "form_menu";
@@ -413,11 +507,15 @@ namespace AppEscala
             FormClosed += sub1_FormClosed;
             Load += Form1_Load;
             sidebar.ResumeLayout(false);
+            pnMenu.ResumeLayout(false);
             MenuContainer.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel4.ResumeLayout(false);
+            EscalaContainer.ResumeLayout(false);
             pnEscala.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            panel8.ResumeLayout(false);
             pnInfo.ResumeLayout(false);
             pnConfig.ResumeLayout(false);
             pnLogout.ResumeLayout(false);
@@ -439,8 +537,6 @@ namespace AppEscala
         private Button subMenu2;
         private Panel pnLogout;
         private Button button8;
-        private Panel pnEscala;
-        private Button button7;
         private Panel pnConfig;
         private Button button9;
         private System.Windows.Forms.Timer timerSideBarTransition;
@@ -455,5 +551,15 @@ namespace AppEscala
         private UserControl2 userControl21;
         private userAcolitos userAcolitos;
         private Missas missas1;
+        private Panel pnMenu;
+        private Button button1;
+        private FlowLayoutPanel EscalaContainer;
+        private Panel pnEscala;
+        private Button btnEscala;
+        private Panel panel7;
+        private Button button5;
+        private Panel panel8;
+        private Button button6;
+        private System.Windows.Forms.Timer EscalaTransition;
     }
 }

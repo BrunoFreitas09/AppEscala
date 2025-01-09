@@ -47,10 +47,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(48, 17);
             label1.Name = "label1";
-            label1.Size = new Size(88, 25);
+            label1.Size = new Size(94, 23);
             label1.TabIndex = 1;
             label1.Text = "Acólitos:";
             // 
@@ -64,10 +64,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(48, 57);
+            label2.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(36, 56);
             label2.Name = "label2";
-            label2.Size = new Size(115, 17);
+            label2.Size = new Size(124, 16);
             label2.TabIndex = 3;
             label2.Text = "Pesquisar Acólito:";
             // 

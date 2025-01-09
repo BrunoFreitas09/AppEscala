@@ -14,7 +14,7 @@ namespace AppEscala
 {
     public partial class form_menu : Form
     {
-        
+
         FrmEscala Esc;
         FrmInfo inf;
         FrmSub1 sub1;
@@ -30,6 +30,7 @@ namespace AppEscala
             GerarPdf();
         }
 
+        //teste ne paeee
         private void GerarPdf()
         {
             var arquivo = @"C:\dados\recibo.pdf";
@@ -151,13 +152,13 @@ namespace AppEscala
                     menuExpand = true;
                 }
             }
-            //kkakaak
+
             else
             {
                 //velocidade de subida 
                 MenuContainer.Height -= 3;
                 //aqui é o qunato que o menu vai subir(quanto maior o valor,menos ele vai subir)
-                if (MenuContainer.Height <= 65)
+                if (MenuContainer.Height <= 55)
                 {
                     menuTransition.Stop();
                     menuExpand = false;
@@ -174,7 +175,9 @@ namespace AppEscala
         {
             userControl11.Hide();
             userControl21.Hide();
+            missas1 = new Missas();
             missas1.Hide();
+
             panel1.BringToFront();
         }
 
@@ -185,13 +188,13 @@ namespace AppEscala
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
+
             userControl11.Hide();
             userAcolitos.Hide();
             userControl21.Hide();
 
             missas1.Show();
-            
+
         }
         bool sidebarExpand = true;
         private void timerSideBarTransition_Tick(object sender, EventArgs e)
@@ -212,6 +215,7 @@ namespace AppEscala
                     pnInfo.Width = sidebar.Width;
                     pnLogout.Width = sidebar.Width;
                     MenuContainer.Width = sidebar.Width;
+                    pnMenu.Width = sidebar.Width;
                 }
             }
             else
@@ -219,7 +223,7 @@ namespace AppEscala
                 //velocidade em que a barra horizontal vai abrir
                 sidebar.Width += 5;
                 //regula o quanto que o sidebar(barra lateral preta) vai abrir 
-                if (sidebar.Width >= 189)
+                if (sidebar.Width >= 184)
                 {
                     sidebarExpand = true;
                     timerSideBarTransition.Stop();
@@ -229,6 +233,7 @@ namespace AppEscala
                     pnInfo.Width = sidebar.Width;
                     pnLogout.Width = sidebar.Width;
                     MenuContainer.Width = sidebar.Width;
+                    pnMenu.Width = sidebar.Width;
                 }
             }
         }
@@ -265,7 +270,7 @@ namespace AppEscala
             missas1.Hide();
             //mostrar a que quer
             userAcolitos.Show();
-            
+
 
 
         }
@@ -283,7 +288,7 @@ namespace AppEscala
             missas1.Hide();
             //mostrar a que quer
             userControl21.Show();
-            
+
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -291,14 +296,44 @@ namespace AppEscala
             Close();
         }
 
-        private void userControl21_Load(object sender, EventArgs e)
+        private void btnEscala_Click(object sender, EventArgs e)
         {
-
+            EscalaTransition.Start();
         }
 
-        private void sidebar_Paint(object sender, PaintEventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
+            timerSideBarTransition.Start();
+        }
 
+        bool EscalaExpand = false;
+
+        private void EscalaTransition_Tick(object sender, EventArgs e)
+        {
+            if (EscalaExpand == false)
+            {
+                //velocidade de descidada do menu
+                EscalaContainer.Height += 3;
+
+                //Aqui é o quanto que a o menu vai descer
+                if (EscalaContainer.Height >= 145)
+                {
+                    EscalaTransition.Stop();
+                    EscalaExpand = true;
+                }
+            }
+
+            else
+            {
+                //velocidade de subida 
+                EscalaContainer.Height -= 3;
+                //aqui é o qunato que o menu vai subir(quanto maior o valor,menos ele vai subir)
+                if (EscalaContainer.Height <= 65)
+                {
+                    EscalaTransition.Stop();
+                    EscalaExpand = false;
+                }
+            }
         }
     }
     public class Produtos
