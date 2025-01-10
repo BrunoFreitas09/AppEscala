@@ -146,7 +146,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(746, 97);
+            panel1.Size = new Size(746, 68);
             panel1.TabIndex = 14;
             // 
             // UserControl2

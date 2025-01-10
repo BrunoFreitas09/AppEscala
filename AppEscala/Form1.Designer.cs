@@ -432,7 +432,7 @@ namespace AppEscala
             nightControlBox1.EnableMaximizeColor = Color.WhiteSmoke;
             nightControlBox1.EnableMinimizeButton = true;
             nightControlBox1.EnableMinimizeColor = Color.WhiteSmoke;
-            nightControlBox1.Location = new Point(634, 5);
+            nightControlBox1.Location = new Point(637, 0);
             nightControlBox1.MaximizeHoverColor = Color.FromArgb(15, 255, 255, 255);
             nightControlBox1.MaximizeHoverForeColor = Color.White;
             nightControlBox1.MinimizeHoverColor = Color.FromArgb(15, 255, 255, 255);
@@ -443,7 +443,7 @@ namespace AppEscala
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DimGray;
+            panel1.BackColor = Color.Gray;
             panel1.Controls.Add(nightControlBox1);
             panel1.Controls.Add(btnHam);
             panel1.Dock = DockStyle.Top;

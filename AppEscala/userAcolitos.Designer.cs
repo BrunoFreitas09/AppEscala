@@ -84,7 +84,6 @@
             // 
             // dgv_acolitos
             // 
-            dgv_acolitos.AllowUserToAddRows = false;
             dgv_acolitos.AllowUserToDeleteRows = false;
             dgv_acolitos.AllowUserToOrderColumns = true;
             dgv_acolitos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
