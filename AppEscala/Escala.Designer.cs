@@ -41,7 +41,7 @@
             button1.Image = null;
             button1.ImageAlign = ContentAlignment.MiddleLeft;
             button1.InactiveColor = Color.FromArgb(32, 34, 37);
-            button1.Location = new Point(128, 298);
+            button1.Location = new Point(382, 211);
             button1.Name = "button1";
             button1.PressedBorderColor = Color.FromArgb(165, 37, 37);
             button1.PressedColor = Color.FromArgb(165, 37, 37);

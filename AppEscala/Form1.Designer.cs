@@ -103,6 +103,7 @@ namespace AppEscala
             sidebar.Padding = new Padding(0, 30, 0, 0);
             sidebar.Size = new Size(40, 472);
             sidebar.TabIndex = 3;
+            sidebar.MouseEnter += sidebar_MouseEnter;
             // 
             // pnMenu
             // 
@@ -443,7 +444,7 @@ namespace AppEscala
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Gray;
+            panel1.BackColor = SystemColors.GrayText;
             panel1.Controls.Add(nightControlBox1);
             panel1.Controls.Add(btnHam);
             panel1.Dock = DockStyle.Top;
@@ -462,6 +463,7 @@ namespace AppEscala
             // 
             // userControl21
             // 
+            userControl21.BackColor = Color.Silver;
             userControl21.Location = new Point(33, 37);
             userControl21.Name = "userControl21";
             userControl21.Size = new Size(743, 472);
@@ -474,6 +476,7 @@ namespace AppEscala
             userAcolitos.Name = "userAcolitos";
             userAcolitos.Size = new Size(746, 472);
             userAcolitos.TabIndex = 8;
+            userAcolitos.MouseEnter += userAcolitos_MouseEnter;
             // 
             // EscalaTransition
             // 

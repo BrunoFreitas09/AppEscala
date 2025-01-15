@@ -52,7 +52,7 @@
             button1.Font = new Font("Segoe UI", 12F);
             button1.HoverTextColor = Color.FromArgb(48, 49, 51);
             button1.InfoColor = Color.FromArgb(144, 147, 153);
-            button1.Location = new Point(142, 172);
+            button1.Location = new Point(118, 170);
             button1.Name = "button1";
             button1.PrimaryColor = Color.FromArgb(64, 158, 255);
             button1.Size = new Size(190, 40);

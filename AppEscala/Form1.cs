@@ -303,7 +303,7 @@ namespace AppEscala
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            timerSideBarTransition.Start();
+
         }
 
         bool EscalaExpand = false;
@@ -337,6 +337,24 @@ namespace AppEscala
         }
 
 
+
+        private void userAcolitos_MouseEnter(object sender, EventArgs e)
+        {
+            if (sidebar.Width >= 184)
+            {
+                timerSideBarTransition.Start();
+            }
+            
+        }
+
+        private void sidebar_MouseEnter(object sender, EventArgs e)
+        {
+            if (sidebar.Width <= 40)
+            {
+                timerSideBarTransition.Start();
+            }
+            
+        }
     }
     public class Produtos
     {
