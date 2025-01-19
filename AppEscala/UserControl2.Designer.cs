@@ -40,6 +40,7 @@
             panel5 = new Panel();
             hopeRoundButton1 = new ReaLTaiizor.Controls.HopeRoundButton();
             hopeRoundButton2 = new ReaLTaiizor.Controls.HopeRoundButton();
+            materialButton1 = new ReaLTaiizor.Controls.MaterialButton();
             SuspendLayout();
             // 
             // txtNome
@@ -204,11 +205,32 @@
             hopeRoundButton2.WarningColor = Color.FromArgb(230, 162, 60);
             hopeRoundButton2.Click += hopeRoundButton2_Click;
             // 
+            // materialButton1
+            // 
+            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton1.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton1.Depth = 0;
+            materialButton1.HighEmphasis = true;
+            materialButton1.Icon = null;
+            materialButton1.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            materialButton1.Location = new Point(503, 375);
+            materialButton1.Margin = new Padding(4, 6, 4, 6);
+            materialButton1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialButton1.Name = "materialButton1";
+            materialButton1.NoAccentTextColor = Color.Empty;
+            materialButton1.Size = new Size(158, 36);
+            materialButton1.TabIndex = 21;
+            materialButton1.Text = "materialButton1";
+            materialButton1.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton1.UseAccentColor = false;
+            materialButton1.UseVisualStyleBackColor = true;
+            // 
             // UserControl2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Silver;
+            Controls.Add(materialButton1);
             Controls.Add(hopeRoundButton2);
             Controls.Add(hopeRoundButton1);
             Controls.Add(panel5);
@@ -241,5 +263,6 @@
         private Panel panel5;
         private ReaLTaiizor.Controls.HopeRoundButton hopeRoundButton1;
         private ReaLTaiizor.Controls.HopeRoundButton hopeRoundButton2;
+        private ReaLTaiizor.Controls.MaterialButton materialButton1;
     }
 }

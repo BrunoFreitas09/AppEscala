@@ -344,18 +344,32 @@ namespace AppEscala
             {
                 timerSideBarTransition.Start();
             }
-            
+
         }
 
-        private void sidebar_MouseEnter(object sender, EventArgs e)
+
+
+        private void form_menu_MouseEnter(object sender, EventArgs e)
+        {
+            if (sidebar.Width >= 184)
+            {
+                timerSideBarTransition.Start();
+            }
+        }
+
+        private void sidebar_MouseEnter_1(object sender, EventArgs e)
         {
             if (sidebar.Width <= 40)
             {
                 timerSideBarTransition.Start();
             }
-            
         }
+
+        
     }
+
+
+}
     public class Produtos
     {
         public string data { get; set; }
@@ -418,4 +432,4 @@ namespace AppEscala
         }
     }
 
-}
+

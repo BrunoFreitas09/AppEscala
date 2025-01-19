@@ -78,6 +78,7 @@ namespace AppEscala
             {
                 chk.Image = Properties.Resources.Vunchecked;
             }
+
             if (check_fimDsmn.Checked)
             {
                 form_fimDsmn formF = new form_fimDsmn();

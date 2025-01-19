@@ -103,7 +103,7 @@ namespace AppEscala
             sidebar.Padding = new Padding(0, 30, 0, 0);
             sidebar.Size = new Size(40, 472);
             sidebar.TabIndex = 3;
-            sidebar.MouseEnter += sidebar_MouseEnter;
+            sidebar.MouseEnter += sidebar_MouseEnter_1;
             // 
             // pnMenu
             // 
@@ -450,7 +450,7 @@ namespace AppEscala
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(776, 39);
+            panel1.Size = new Size(776, 38);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
             // 
@@ -499,6 +499,7 @@ namespace AppEscala
             Text = " ";
             FormClosed += sub1_FormClosed;
             Load += Form1_Load;
+            MouseEnter += form_menu_MouseEnter;
             sidebar.ResumeLayout(false);
             pnMenu.ResumeLayout(false);
             MenuContainer.ResumeLayout(false);
