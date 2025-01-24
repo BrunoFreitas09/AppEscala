@@ -67,6 +67,7 @@ namespace AppEscala
             }
         }
 
+
         private void check_fimDsmn_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox chk = sender as CheckBox;
@@ -377,5 +378,7 @@ namespace AppEscala
                 }
             }
         }
+
+  
     }
 }

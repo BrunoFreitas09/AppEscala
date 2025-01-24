@@ -40,7 +40,6 @@
             panel5 = new Panel();
             hopeRoundButton1 = new ReaLTaiizor.Controls.HopeRoundButton();
             hopeRoundButton2 = new ReaLTaiizor.Controls.HopeRoundButton();
-            materialButton1 = new ReaLTaiizor.Controls.MaterialButton();
             SuspendLayout();
             // 
             // txtNome
@@ -55,10 +54,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Baskerville Old Face", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(158, 133);
+            label2.Font = new Font("Leelawadee", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(147, 132);
             label2.Name = "label2";
-            label2.Size = new Size(57, 18);
+            label2.Size = new Size(69, 23);
             label2.TabIndex = 2;
             label2.Text = "Nome:";
             // 
@@ -82,11 +81,11 @@
             check_semana.FlatAppearance.MouseDownBackColor = Color.Transparent;
             check_semana.FlatAppearance.MouseOverBackColor = Color.Transparent;
             check_semana.FlatStyle = FlatStyle.Flat;
-            check_semana.Font = new Font("Baskerville Old Face", 12F, FontStyle.Bold);
+            check_semana.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold);
             check_semana.Image = Properties.Resources.Vunchecked;
             check_semana.Location = new Point(78, 203);
             check_semana.Name = "check_semana";
-            check_semana.Size = new Size(270, 38);
+            check_semana.Size = new Size(281, 38);
             check_semana.TabIndex = 8;
             check_semana.Text = "Pode servir durante a semana.";
             check_semana.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -102,11 +101,11 @@
             check_fimDsmn.FlatAppearance.MouseDownBackColor = Color.Transparent;
             check_fimDsmn.FlatAppearance.MouseOverBackColor = Color.Transparent;
             check_fimDsmn.FlatStyle = FlatStyle.Flat;
-            check_fimDsmn.Font = new Font("Baskerville Old Face", 12F, FontStyle.Bold);
+            check_fimDsmn.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold);
             check_fimDsmn.Image = Properties.Resources.Vunchecked;
             check_fimDsmn.Location = new Point(78, 247);
             check_fimDsmn.Name = "check_fimDsmn";
-            check_fimDsmn.Size = new Size(279, 38);
+            check_fimDsmn.Size = new Size(290, 38);
             check_fimDsmn.TabIndex = 9;
             check_fimDsmn.Text = "Pode servir no final de semana.";
             check_fimDsmn.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -126,10 +125,10 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Baskerville Old Face", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(407, 173);
+            label3.Font = new Font("Leelawadee UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(391, 166);
             label3.Name = "label3";
-            label3.Size = new Size(232, 18);
+            label3.Size = new Size(284, 25);
             label3.TabIndex = 12;
             label3.Text = "Dias específicos que não pode:";
             // 
@@ -137,11 +136,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Baskerville Old Face", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Malgun Gothic", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ControlText;
-            label1.Location = new Point(199, 41);
+            label1.Location = new Point(158, 39);
             label1.Name = "label1";
-            label1.Size = new Size(364, 34);
+            label1.Size = new Size(409, 47);
             label1.TabIndex = 0;
             label1.Text = "ADICIONAR ACÓLITOS:";
             // 
@@ -205,32 +204,11 @@
             hopeRoundButton2.WarningColor = Color.FromArgb(230, 162, 60);
             hopeRoundButton2.Click += hopeRoundButton2_Click;
             // 
-            // materialButton1
-            // 
-            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton1.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton1.Depth = 0;
-            materialButton1.HighEmphasis = true;
-            materialButton1.Icon = null;
-            materialButton1.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton1.Location = new Point(503, 375);
-            materialButton1.Margin = new Padding(4, 6, 4, 6);
-            materialButton1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            materialButton1.Name = "materialButton1";
-            materialButton1.NoAccentTextColor = Color.Empty;
-            materialButton1.Size = new Size(158, 36);
-            materialButton1.TabIndex = 21;
-            materialButton1.Text = "materialButton1";
-            materialButton1.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton1.UseAccentColor = false;
-            materialButton1.UseVisualStyleBackColor = true;
-            // 
             // UserControl2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Silver;
-            Controls.Add(materialButton1);
             Controls.Add(hopeRoundButton2);
             Controls.Add(hopeRoundButton1);
             Controls.Add(panel5);
@@ -263,6 +241,5 @@
         private Panel panel5;
         private ReaLTaiizor.Controls.HopeRoundButton hopeRoundButton1;
         private ReaLTaiizor.Controls.HopeRoundButton hopeRoundButton2;
-        private ReaLTaiizor.Controls.MaterialButton materialButton1;
     }
 }

@@ -70,11 +70,12 @@
             // 
             // panel3
             // 
+            panel3.BackColor = Color.WhiteSmoke;
             panel3.Controls.Add(check_tds);
             panel3.Controls.Add(label4);
             panel3.Controls.Add(label5);
             panel3.Controls.Add(label3);
-            panel3.Location = new Point(240, 219);
+            panel3.Location = new Point(250, 258);
             panel3.Name = "panel3";
             panel3.Size = new Size(245, 119);
             panel3.TabIndex = 24;
@@ -96,9 +97,9 @@
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(68, 41);
             label4.Name = "label4";
-            label4.Size = new Size(111, 17);
+            label4.Size = new Size(110, 17);
             label4.TabIndex = 17;
-            label4.Text = "a semana inteiro";
+            label4.Text = "a semana inteira";
             // 
             // label5
             // 
@@ -123,7 +124,7 @@
             // ou
             // 
             ou.AutoSize = true;
-            ou.Location = new Point(350, 188);
+            ou.Location = new Point(360, 227);
             ou.Name = "ou";
             ou.Size = new Size(21, 15);
             ou.TabIndex = 23;
@@ -131,6 +132,7 @@
             // 
             // panel_ter
             // 
+            panel_ter.BackColor = Color.WhiteSmoke;
             panel_ter.BorderStyle = BorderStyle.FixedSingle;
             panel_ter.Controls.Add(check_terN);
             panel_ter.Controls.Add(label1);
@@ -138,7 +140,7 @@
             panel_ter.Controls.Add(check_terM);
             panel_ter.Location = new Point(152, 12);
             panel_ter.Name = "panel_ter";
-            panel_ter.Size = new Size(124, 157);
+            panel_ter.Size = new Size(124, 192);
             panel_ter.TabIndex = 22;
             // 
             // check_terN
@@ -186,6 +188,7 @@
             // 
             // panel_qua
             // 
+            panel_qua.BackColor = Color.WhiteSmoke;
             panel_qua.BorderStyle = BorderStyle.FixedSingle;
             panel_qua.Controls.Add(check_quaN);
             panel_qua.Controls.Add(label2);
@@ -193,7 +196,7 @@
             panel_qua.Controls.Add(check_quaM);
             panel_qua.Location = new Point(294, 12);
             panel_qua.Name = "panel_qua";
-            panel_qua.Size = new Size(124, 157);
+            panel_qua.Size = new Size(124, 192);
             panel_qua.TabIndex = 21;
             // 
             // check_quaN
@@ -245,7 +248,7 @@
             airButton1.Customization = "7e3t//Ly8v/r6+v/5ubm/+vr6//f39//p6en/zw8PP8UFBT/gICA/w==";
             airButton1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             airButton1.Image = null;
-            airButton1.Location = new Point(308, 354);
+            airButton1.Location = new Point(318, 393);
             airButton1.Name = "airButton1";
             airButton1.NoRounding = false;
             airButton1.Size = new Size(100, 45);
@@ -256,6 +259,7 @@
             // 
             // panel_qui
             // 
+            panel_qui.BackColor = Color.WhiteSmoke;
             panel_qui.BorderStyle = BorderStyle.FixedSingle;
             panel_qui.Controls.Add(check_quiN);
             panel_qui.Controls.Add(label6);
@@ -263,7 +267,7 @@
             panel_qui.Controls.Add(check_quiM);
             panel_qui.Location = new Point(439, 12);
             panel_qui.Name = "panel_qui";
-            panel_qui.Size = new Size(124, 157);
+            panel_qui.Size = new Size(124, 192);
             panel_qui.TabIndex = 24;
             // 
             // check_quiN
@@ -311,6 +315,7 @@
             // 
             // panel_sex
             // 
+            panel_sex.BackColor = Color.WhiteSmoke;
             panel_sex.BorderStyle = BorderStyle.FixedSingle;
             panel_sex.Controls.Add(check_sexN);
             panel_sex.Controls.Add(check_sexT);
@@ -318,7 +323,7 @@
             panel_sex.Controls.Add(check_sexM);
             panel_sex.Location = new Point(581, 12);
             panel_sex.Name = "panel_sex";
-            panel_sex.Size = new Size(124, 157);
+            panel_sex.Size = new Size(124, 192);
             panel_sex.TabIndex = 23;
             // 
             // check_sexN
@@ -366,6 +371,7 @@
             // 
             // panel_seg
             // 
+            panel_seg.BackColor = Color.White;
             panel_seg.BorderStyle = BorderStyle.FixedSingle;
             panel_seg.Controls.Add(check_segN);
             panel_seg.Controls.Add(label8);
@@ -373,14 +379,14 @@
             panel_seg.Controls.Add(check_segM);
             panel_seg.Location = new Point(12, 12);
             panel_seg.Name = "panel_seg";
-            panel_seg.Size = new Size(124, 157);
+            panel_seg.Size = new Size(124, 192);
             panel_seg.TabIndex = 23;
             panel_seg.Paint += panel6_Paint;
             // 
             // check_segN
             // 
             check_segN.AutoSize = true;
-            check_segN.Location = new Point(30, 101);
+            check_segN.Location = new Point(19, 100);
             check_segN.Name = "check_segN";
             check_segN.Size = new Size(55, 19);
             check_segN.TabIndex = 27;
@@ -392,7 +398,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(27, 23);
+            label8.Location = new Point(19, 11);
             label8.Name = "label8";
             label8.Size = new Size(77, 21);
             label8.TabIndex = 13;
@@ -401,7 +407,7 @@
             // check_segT
             // 
             check_segT.AutoSize = true;
-            check_segT.Location = new Point(30, 84);
+            check_segT.Location = new Point(19, 83);
             check_segT.Name = "check_segT";
             check_segT.Size = new Size(54, 19);
             check_segT.TabIndex = 26;
@@ -412,7 +418,7 @@
             // check_segM
             // 
             check_segM.AutoSize = true;
-            check_segM.Location = new Point(30, 67);
+            check_segM.Location = new Point(19, 65);
             check_segM.Name = "check_segM";
             check_segM.Size = new Size(63, 19);
             check_segM.TabIndex = 25;
@@ -424,6 +430,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Gainsboro;
             ClientSize = new Size(719, 450);
             Controls.Add(panel_seg);
             Controls.Add(panel_qui);

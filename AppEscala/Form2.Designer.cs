@@ -52,10 +52,11 @@
             // 
             // airButton1
             // 
+            airButton1.BackColor = Color.Black;
             airButton1.Customization = "7e3t//Ly8v/r6+v/5ubm/+vr6//f39//p6en/zw8PP8UFBT/gICA/w==";
             airButton1.Font = new Font("Segoe UI", 9F);
             airButton1.Image = null;
-            airButton1.Location = new Point(243, 204);
+            airButton1.Location = new Point(258, 213);
             airButton1.Name = "airButton1";
             airButton1.NoRounding = false;
             airButton1.Size = new Size(100, 45);
@@ -66,6 +67,7 @@
             // 
             // panel_dom
             // 
+            panel_dom.BackColor = Color.WhiteSmoke;
             panel_dom.BorderStyle = BorderStyle.FixedSingle;
             panel_dom.Controls.Add(check_domN);
             panel_dom.Controls.Add(label2);
@@ -122,6 +124,7 @@
             // 
             // panel_sab
             // 
+            panel_sab.BackColor = Color.WhiteSmoke;
             panel_sab.BorderStyle = BorderStyle.FixedSingle;
             panel_sab.Controls.Add(check_sabN);
             panel_sab.Controls.Add(check_sabT);
@@ -216,6 +219,7 @@
             // 
             // panel3
             // 
+            panel3.BackColor = Color.WhiteSmoke;
             panel3.Controls.Add(check_tds);
             panel3.Controls.Add(label4);
             panel3.Controls.Add(label5);
@@ -240,6 +244,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Gainsboro;
             ClientSize = new Size(611, 290);
             Controls.Add(panel3);
             Controls.Add(ou);
